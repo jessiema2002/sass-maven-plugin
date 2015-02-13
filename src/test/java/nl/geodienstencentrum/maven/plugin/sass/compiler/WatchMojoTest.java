@@ -126,7 +126,7 @@ public class WatchMojoTest {
 			// done; lets check compilation results
 			TestResources.assertFileContents(projectCopy, "expected.css",
 					"target/maven-compass-test-1.0-SNAPSHOT/css/compiled.css");
-			if (!IS_WINDOWS) {
+			// if (!IS_WINDOWS) {
 				// skip for now because the jruby watcher fails to see the changes on windows
 				// this would be better with org.junit.Assume.assumeThat.assumeThat
 				// but since TestResources assertions are void...
@@ -140,7 +140,7 @@ public class WatchMojoTest {
 				TestResources.assertFileContents(projectCopy,
 						"print.css",
 						"target/maven-compass-test-1.0-SNAPSHOT/css/print.css");
-			}
+			// }
 		}
 	}
 }
